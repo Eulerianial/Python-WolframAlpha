@@ -1,3 +1,8 @@
+#!/usr/bin/python
+ 
+from subprocess import call
+call("clear")
+import sys
 import urllib2
 import urllib
 import httplib
@@ -35,7 +40,9 @@ class wolfram(object):
         print result_dics['Result']
  
 if __name__ == "__main__":
-    appid = sys.argv[0]
-    query = sys.argv[1]
+    #appid = sys.argv[0]
+    appid = 'LP545E-LP5Y8WU657' 
+    query = 'group of 8'
+    print 'I am asking for: ', query
     w = wolfram(appid)
     w.search(query)
